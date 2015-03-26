@@ -1,0 +1,309 @@
+ID   001R_FRG3G              Reviewed;         256 AA.
+AC   Q6GZX4;
+DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
+DT   19-JUL-2004, sequence version 1.
+DT   18-APR-2012, entry version 24.
+DE   RecName: Full=Putative transcription factor 001R;
+GN   ORFNames=FV3-001R;
+OS   Frog virus 3 (isolate Goorha) (FV-3).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
+OX   NCBI_TaxID=654924;
+OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
+OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
+viridescens).
+OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
+OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15165820; DOI=10.1016/j.virol.2004.02.019;
+RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
+RT   "Comparative genomic analyses of frog virus 3, type species of the
+RT   genus Ranavirus (family Iridoviridae).";
+RL   Virology 323:70-84(2004).
+CC   -!- FUNCTION: Transcription activation (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; AY548484; AAT09660.1; -; Genomic_DNA.
+DR   RefSeq; YP_031579.1; NC_005946.1.
+DR   ProteinModelPortal; Q6GZX4; -.
+DR   GeneID; 2947773; -.
+DR   ProtClustDB; CLSP2511514; -.
+DR   GO; GO:0046782; P:regulation of viral transcription; IEA:InterPro.
+DR   GO; GO:0006351; P:transcription, DNA-dependent; IEA:UniProtKB-KW.
+DR   InterPro; IPR007031; Poxvirus_VLTF3.
+DR   Pfam; PF04947; Pox_VLTF3; 1.
+PE   4: Predicted;
+KW   Activator; Complete proteome; Reference proteome; Transcription;
+KW   Transcription regulation.
+FT   CHAIN         1    256       Putative transcription factor 001R.
+FT                                /FTId=PRO_0000410512.
+FT   COMPBIAS     14     17       Poly-Arg.
+SQ   SEQUENCE   256 AA;  29735 MW;  B4840739BF7D4121 CRC64;
+     MAFSAEDVLK EYDRRRRMEA LLLSLYYPND RKLLDYKEWS PPRVQVECPK APVEWNNPPS
+//
+ID   002L_FRG3G              Reviewed;         320 AA.
+AC   Q6GZX3;
+DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
+DT   19-JUL-2004, sequence version 1.
+DT   09-JAN-2013, entry version 23.
+DE   RecName: Full=Uncharacterized protein 002L;
+GN   ORFNames=FV3-002L;
+OS   Frog virus 3 (isolate Goorha) (FV-3).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
+OX   NCBI_TaxID=654924;
+OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
+OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
+viridescens).
+OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
+OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15165820; DOI=10.1016/j.virol.2004.02.019;
+RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
+RT   "Comparative genomic analyses of frog virus 3, type species of the
+RT   genus Ranavirus (family Iridoviridae).";
+RL   Virology 323:70-84(2004).
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
+protein
+CC       (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; AY548484; AAT09661.1; -; Genomic_DNA.
+DR   RefSeq; YP_031580.1; NC_005946.1.
+DR   ProteinModelPortal; Q6GZX3; -.
+DR   GeneID; 2947774; -.
+DR   ProtClustDB; CLSP2511503; -.
+DR   GO; GO:0033644; C:host cell membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016021; C:integral to membrane; IEA:UniProtKB-KW.
+DR   InterPro; IPR004251; Vaccinia_virus_A16.
+DR   Pfam; PF03003; DUF230; 1.
+PE   4: Predicted;
+KW   Complete proteome; Host membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1    320       Uncharacterized protein 002L.
+FT                                /FTId=PRO_0000410509.
+FT   TRANSMEM    301    318       Helical; (Potential).
+FT   COMPBIAS    263    295       Pro-rich.
+SQ   SEQUENCE   320 AA;  34642 MW;  9E110808B6E328E0 CRC64;
+     MSIIGATRLQ NDKSDTYSAG PCYAGGCSAF TPRGTCGKDW DLGEQTCASG FCTSQPLCAR
+     IKKTQVCGLR YSSKGKDPLV SAEWDSRGAP YVRCTYDADL IDTQAQVDQF VSMFGESPSL
+//
+D   004R_FRG3G              Reviewed;          60 AA.
+AC   Q6GZX1;
+DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
+DT   19-JUL-2004, sequence version 1.
+DT   21-SEP-2011, entry version 20.
+DE   RecName: Full=Uncharacterized protein 004R;
+GN   ORFNames=FV3-004R;
+OS   Frog virus 3 (isolate Goorha) (FV-3).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
+OX   NCBI_TaxID=654924;
+OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
+OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
+viridescens).
+OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
+OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15165820; DOI=10.1016/j.virol.2004.02.019;
+RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
+RT   "Comparative genomic analyses of frog virus 3, type species of the
+RT   genus Ranavirus (family Iridoviridae).";
+RL   Virology 323:70-84(2004).
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
+protein
+CC       (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; AY548484; AAT09663.1; -; Genomic_DNA.
+DR   RefSeq; YP_031582.1; NC_005946.1.
+DR   GeneID; 2947776; -.
+DR   ProtClustDB; CLSP2512348; -.
+DR   GO; GO:0033644; C:host cell membrane; EXP:UniProtKB-SubCell.
+DR   GO; GO:0006351; P:transcription, DNA-dependent; EXP:UniProtKB-KW.
+PE   4: Predicted;
+KW   Complete proteome; Host membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1     60       Uncharacterized protein 004R.
+FT                                /FTId=PRO_0000410528.
+FT   TRANSMEM     14     34       Helical; (Potential).
+SQ   SEQUENCE   60 AA;  6514 MW;  12F072778EE6DFE4 CRC64;
+     MNAKYDTDQG VGRMLFLGTI GLAVVVGGLM AYGYYYDGKT PSSGTSFHTA SPSFSSRYRY
+//
+ID   010R_FRG3G              Reviewed;         137 AA.
+AC   Q6GZW5;
+DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
+DT   19-JUL-2004, sequence version 1.
+DT   21-SEP-2011, entry version 20.
+DE   RecName: Full=Uncharacterized protein 010R;
+GN   ORFNames=FV3-010R;
+OS   Frog virus 3 (isolate Goorha) (FV-3).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
+OX   NCBI_TaxID=654924;
+OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
+OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
+viridescens).
+OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
+OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15165820; DOI=10.1016/j.virol.2004.02.019;
+RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
+RT   "Comparative genomic analyses of frog virus 3, type species of the
+RT   genus Ranavirus (family Iridoviridae).";
+RL   Virology 323:70-84(2004).
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
+protein
+CC       (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; AY548484; AAT09669.1; -; Genomic_DNA.
+DR   RefSeq; YP_031588.1; NC_005946.1.
+DR   GeneID; 2947782; -.
+DR   ProtClustDB; CLSP2512351; -.
+DR   GO; GO:0033644; C:host cell membrane; EXP:UniProtKB-SubCell.
+DR   GO; GO:0006351; P:transcription, DNA-dependent; EXP:UniProtKB-KW.
+PE   4: Predicted;
+KW   Complete proteome; Host membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1    137       Uncharacterized protein 010R.
+FT                                /FTId=PRO_0000410534.
+FT   TRANSMEM     20     42       Helical; (Potential).
+SQ   SEQUENCE   137 AA;  14878 MW;  69F02C3584628958 CRC64;
+     MKMDTDCRHW IVLASVPVLT VLAFKGEGAL ALAGLLVMAA VAMYRDRTEK KYSAARAPSP
+     IAGHKTAYVT DPSAFAAGTV PVYPAPSNMG SDRFEGWVGG VLTGVGSSHL DHRKFAERQL
+     VDRREKMVGY GWTKSFF
+//
+ID   011R_FRG3G              Reviewed;          70 AA.
+AC   Q6GZW4;
+DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
+DT   19-JUL-2004, sequence version 1.
+DT   21-SEP-2011, entry version 20.
+DE   RecName: Full=Uncharacterized protein 011R;
+GN   ORFNames=FV3-011R;
+OS   Frog virus 3 (isolate Goorha) (FV-3).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
+OX   NCBI_TaxID=654924;
+OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
+OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
+viridescens).
+OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
+OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15165820; DOI=10.1016/j.virol.2004.02.019;
+RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
+RT   "Comparative genomic analyses of frog virus 3, type species of the
+RT   genus Ranavirus (family Iridoviridae).";
+RL   Virology 323:70-84(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Tan W.G.H., Barkman T.J., Chinchar V.G., Essani K.;
+RL   Submitted (FEB-2004) to the EMBL/GenBank/DDBJ databases.
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
+protein
+CC       (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; AY548484; AAT09670.1; -; Genomic_DNA.
+DR   RefSeq; YP_031589.1; NC_005946.1.
+DR   GeneID; 2947783; -.
+DR   ProtClustDB; CLSP2512396; -.
+DR   GO; GO:0000008; M:thioredoxin; EXP:UniProtKB-KW.
+DR   GO; GO:0006351; P:transcription, DNA-dependent; EXP:UniProtKB-KW.
+PE   4: Predicted;
+KW   Complete proteome; Host membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1     70       Uncharacterized protein 011R.
+FT                                /FTId=PRO_0000410547.
+FT   TRANSMEM      4     24       Helical; (Potential).
+SQ   SEQUENCE   70 AA;  7872 MW;  D4A52724E9D798C6 CRC64;
+     MTSVKTIAML AMLVIVAALI YMGYRTFTSM QSKLNELESR VNAPQLRPPV MSPIVPLNFI
+     ESEDLDKELD
+//
+ID   013L_IIV3               Reviewed;          90 AA.
+AC   Q197E7;
+DT   16-JUN-2009, integrated into UniProtKB/Swiss-Prot.
+DT   11-JUL-2006, sequence version 1.
+DT   21-SEP-2011, entry version 21.
+DE   RecName: Full=Uncharacterized protein IIV3-013L;
+GN   ORFNames=IIV3-013L;
+OS   Invertebrate iridescent virus 3 (IIV-3) (Mosquito iridescent
+virus).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae;
+Chloriridovirus.
+OX   NCBI_TaxID=345201;
+OH   NCBI_TaxID=7163; Aedes vexans (Inland floodwater mosquito) (Culex
+vexans).
+OH   NCBI_TaxID=42431; Culex territans.
+OH   NCBI_TaxID=332058; Culiseta annulata.
+OH   NCBI_TaxID=310513; Ochlerotatus sollicitans (eastern saltmarsh
+mosquito).
+OH   NCBI_TaxID=329105; Ochlerotatus taeniorhynchus (Black salt marsh
+mosquito) (Aedes taeniorhynchus).
+OH   NCBI_TaxID=7183; Psorophora ferox.
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16912294; DOI=10.1128/JVI.00464-06;
+RA   Delhon G., Tulman E.R., Afonso C.L., Lu Z., Becnel J.J., Moser
+B.A.,
+RA   Kutish G.F., Rock D.L.;
+RT   "Genome of invertebrate iridescent virus type 3 (mosquito
+iridescent
+RT   virus).";
+RL   J. Virol. 80:8439-8449(2006).
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
+protein
+CC       (Potential).
+CC
+-----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see
+http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC
+-----------------------------------------------------------------------
+DR   EMBL; DQ643392; ABF82043.1; -; Genomic_DNA.
+DR   RefSeq; YP_654585.1; NC_008187.1.
+DR   GeneID; 4156262; -.
+DR   GO; GO:0033644; C:host cell membrane; EXP:UniProtKB-SubCell.
+DR   GO; GO:0000008; M:thioredoxin; EXP:UniProtKB-KW.
+PE   4: Predicted;
+KW   Complete proteome; Host membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1     90       Uncharacterized protein IIV3-013L.
+FT                                /FTId=PRO_0000377942.
+FT   TRANSMEM     52     72       Helical; (Potential).
+SQ   SEQUENCE   90 AA;  10851 MW;  077C22D16315DB07 CRC64;
+     MYYRDQYGNV KYAPEGMGPH HAASSSHHSA QHHHMTKENF SMDDVHSWFE KYKMWFLYAL
+     ILALIFGVFM WWSKYNHDKK RSLNTASIFY
+//

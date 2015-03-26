@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 import argparse
+# change mockCAFA to dbCAFA to run the actual program
 from mockCAFA import Protein, ProteinGo, Go, Evidence
 
+#This function queries the database 
 def queries(year):
     nameGoEvidence = Protein.select(Protein.entryname ,Evidence.evidencecode ,Go.go_domain,
     Go.go_term).join(ProteinGo).join(Evidence).switch(ProteinGo).join(Go).where(Evidence.ondate.year ==
     year).order_by(Protein.entryname).naive()
     return nameGoEvidence
 
+#Organize the data structure into a dictionary
 def organize(nameGoEvidenceEarlier,nameGoEvidenceLater):
     earlierDict = {}
     laterDict = {}
@@ -17,6 +20,9 @@ def organize(nameGoEvidenceEarlier,nameGoEvidenceLater):
         laterDict[later.entryname] = laterDict.get(later.entryname,[]) + [((later.go_domain).strip(),(later.evidencecode).strip(),(later.go_term).strip())]
     return earlierDict,laterDict
 
+#Extract only those proteins which have non-exp 
+#evidence codes alone
+#this is only for no knowledge benchmarks
 def collectNonExpProteinsEarlierOnly(earlierDict):
     nonexpEvidenceList = {'IEA':0,'ISS':0,'ISO':0,'ISA':0,'ISM':0,'IGC':0,'IBA':0,'IBD':0,'IKR':0,'IRD':0,'RCA':0}
     nonexpProteins = []
@@ -26,8 +32,11 @@ def collectNonExpProteinsEarlierOnly(earlierDict):
         if len(intersect) == len(set(allEviCodes)):
            nonexpProteins.append(EntryName)
     ##print "Accumalated non-exp proteins from earlier dataset."
-    return nonexpProteins                               
-
+    return nonexpProteins
+                               
+#Compare those earlier nonexp proteins with later
+#proteins to check which ones turn exp in at least one of the ontologies
+#this is only for no knowledge benchmarks
 def compareNonExpWithLaterDict(laterDict,earlierDict):
     nonexpEvidenceList = {'IEA':0,'ISS':0,'ISO':0,'ISA':0,'ISM':0,'IGC':0,'IBA':0,'IBD':0,'IKR':0,'IRD':0,'RCA':0}
     expEvidenceList = {'EXP':0,'IDA':0,'IPI':0,'IMP':0,'IGI':0,'IEP':0}
