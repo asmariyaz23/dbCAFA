@@ -10,8 +10,7 @@ OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
 OX   NCBI_TaxID=654924;
 OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
 OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
-OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
-viridescens).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus viridescens).
 OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
 OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
 RN   [1]
@@ -22,13 +21,10 @@ RT   "Comparative genomic analyses of frog virus 3, type species of the
 RT   genus Ranavirus (family Iridoviridae).";
 RL   Virology 323:70-84(2004).
 CC   -!- FUNCTION: Transcription activation (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; AY548484; AAT09660.1; -; Genomic_DNA.
 DR   RefSeq; YP_031579.1; NC_005946.1.
 DR   ProteinModelPortal; Q6GZX4; -.
@@ -59,8 +55,7 @@ OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
 OX   NCBI_TaxID=654924;
 OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
 OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
-OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
-viridescens).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus viridescens).
 OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
 OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
 RN   [1]
@@ -70,16 +65,12 @@ RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
 RT   "Comparative genomic analyses of frog virus 3, type species of the
 RT   genus Ranavirus (family Iridoviridae).";
 RL   Virology 323:70-84(2004).
-CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
-protein
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane protein
 CC       (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; AY548484; AAT09661.1; -; Genomic_DNA.
 DR   RefSeq; YP_031580.1; NC_005946.1.
 DR   ProteinModelPortal; Q6GZX3; -.
@@ -100,7 +91,7 @@ SQ   SEQUENCE   320 AA;  34642 MW;  9E110808B6E328E0 CRC64;
      MSIIGATRLQ NDKSDTYSAG PCYAGGCSAF TPRGTCGKDW DLGEQTCASG FCTSQPLCAR
      IKKTQVCGLR YSSKGKDPLV SAEWDSRGAP YVRCTYDADL IDTQAQVDQF VSMFGESPSL
 //
-D   004R_FRG3G              Reviewed;          60 AA.
+ID   004R_FRG3G              Reviewed;          60 AA.
 AC   Q6GZX1;
 DT   28-JUN-2011, integrated into UniProtKB/Swiss-Prot.
 DT   19-JUL-2004, sequence version 1.
@@ -112,8 +103,7 @@ OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
 OX   NCBI_TaxID=654924;
 OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
 OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
-OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
-viridescens).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus viridescens).
 OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
 OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
 RN   [1]
@@ -123,16 +113,12 @@ RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
 RT   "Comparative genomic analyses of frog virus 3, type species of the
 RT   genus Ranavirus (family Iridoviridae).";
 RL   Virology 323:70-84(2004).
-CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
-protein
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane protein
 CC       (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; AY548484; AAT09663.1; -; Genomic_DNA.
 DR   RefSeq; YP_031582.1; NC_005946.1.
 DR   GeneID; 2947776; -.
@@ -160,8 +146,7 @@ OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
 OX   NCBI_TaxID=654924;
 OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
 OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
-OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
-viridescens).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus viridescens).
 OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
 OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
 RN   [1]
@@ -171,16 +156,12 @@ RA   Tan W.G., Barkman T.J., Gregory Chinchar V., Essani K.;
 RT   "Comparative genomic analyses of frog virus 3, type species of the
 RT   genus Ranavirus (family Iridoviridae).";
 RL   Virology 323:70-84(2004).
-CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
-protein
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane protein
 CC       (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; AY548484; AAT09669.1; -; Genomic_DNA.
 DR   RefSeq; YP_031588.1; NC_005946.1.
 DR   GeneID; 2947782; -.
@@ -210,8 +191,7 @@ OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Ranavirus.
 OX   NCBI_TaxID=654924;
 OH   NCBI_TaxID=8295; Ambystoma (mole salamanders).
 OH   NCBI_TaxID=30343; Hyla versicolor (chameleon treefrog).
-OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus
-viridescens).
+OH   NCBI_TaxID=8316; Notophthalmus viridescens (Eastern newt) (Triturus viridescens).
 OH   NCBI_TaxID=8404; Rana pipiens (Northern leopard frog).
 OH   NCBI_TaxID=45438; Rana sylvatica (Wood frog).
 RN   [1]
@@ -225,21 +205,17 @@ RN   [2]
 RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
 RA   Tan W.G.H., Barkman T.J., Chinchar V.G., Essani K.;
 RL   Submitted (FEB-2004) to the EMBL/GenBank/DDBJ databases.
-CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
-protein
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane protein
 CC       (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; AY548484; AAT09670.1; -; Genomic_DNA.
 DR   RefSeq; YP_031589.1; NC_005946.1.
 DR   GeneID; 2947783; -.
 DR   ProtClustDB; CLSP2512396; -.
-DR   GO; GO:0000008; M:thioredoxin; EXP:UniProtKB-KW.
+DR   GO; GO:0000008; F:thioredoxin; EXP:UniProtKB-KW.
 DR   GO; GO:0006351; P:transcription, DNA-dependent; EXP:UniProtKB-KW.
 PE   4: Predicted;
 KW   Complete proteome; Host membrane; Membrane; Reference proteome;
@@ -258,45 +234,34 @@ DT   11-JUL-2006, sequence version 1.
 DT   21-SEP-2011, entry version 21.
 DE   RecName: Full=Uncharacterized protein IIV3-013L;
 GN   ORFNames=IIV3-013L;
-OS   Invertebrate iridescent virus 3 (IIV-3) (Mosquito iridescent
-virus).
-OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae;
-Chloriridovirus.
+OS   Invertebrate iridescent virus 3 (IIV-3) (Mosquito iridescent virus).
+OC   Viruses; dsDNA viruses, no RNA stage; Iridoviridae; Chloriridovirus.
 OX   NCBI_TaxID=345201;
-OH   NCBI_TaxID=7163; Aedes vexans (Inland floodwater mosquito) (Culex
-vexans).
+OH   NCBI_TaxID=7163; Aedes vexans (Inland floodwater mosquito) (Culex vexans).
 OH   NCBI_TaxID=42431; Culex territans.
 OH   NCBI_TaxID=332058; Culiseta annulata.
-OH   NCBI_TaxID=310513; Ochlerotatus sollicitans (eastern saltmarsh
-mosquito).
-OH   NCBI_TaxID=329105; Ochlerotatus taeniorhynchus (Black salt marsh
-mosquito) (Aedes taeniorhynchus).
+OH   NCBI_TaxID=310513; Ochlerotatus sollicitans (eastern saltmarsh mosquito).
+OH   NCBI_TaxID=329105; Ochlerotatus taeniorhynchus (Black salt marsh mosquito) (Aedes taeniorhynchus).
 OH   NCBI_TaxID=7183; Psorophora ferox.
 RN   [1]
 RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
 RX   PubMed=16912294; DOI=10.1128/JVI.00464-06;
-RA   Delhon G., Tulman E.R., Afonso C.L., Lu Z., Becnel J.J., Moser
-B.A.,
+RA   Delhon G., Tulman E.R., Afonso C.L., Lu Z., Becnel J.J., Moser B.A.,
 RA   Kutish G.F., Rock D.L.;
-RT   "Genome of invertebrate iridescent virus type 3 (mosquito
-iridescent
+RT   "Genome of invertebrate iridescent virus type 3 (mosquito iridescent
 RT   virus).";
 RL   J. Virol. 80:8439-8449(2006).
-CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane
-protein
+CC   -!- SUBCELLULAR LOCATION: Host membrane; Single-pass membrane protein
 CC       (Potential).
-CC
------------------------------------------------------------------------
-CC   Copyrighted by the UniProt Consortium, see
-http://www.uniprot.org/terms
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
 CC   Distributed under the Creative Commons Attribution-NoDerivs License
-CC
------------------------------------------------------------------------
+CC   -----------------------------------------------------------------------
 DR   EMBL; DQ643392; ABF82043.1; -; Genomic_DNA.
 DR   RefSeq; YP_654585.1; NC_008187.1.
 DR   GeneID; 4156262; -.
 DR   GO; GO:0033644; C:host cell membrane; EXP:UniProtKB-SubCell.
-DR   GO; GO:0000008; M:thioredoxin; EXP:UniProtKB-KW.
+DR   GO; GO:0000008; F:thioredoxin; EXP:UniProtKB-KW.
 PE   4: Predicted;
 KW   Complete proteome; Host membrane; Membrane; Reference proteome;
 KW   Transmembrane; Transmembrane helix.

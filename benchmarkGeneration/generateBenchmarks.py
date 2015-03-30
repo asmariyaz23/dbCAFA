@@ -1,7 +1,9 @@
 #!/usr/bin/env python
+import sys
+sys.path.insert(0, "/home/asmariyaz/dbCAFA/cafaModel")
 import argparse
-# change mockCAFA to dbCAFA to run the actual program
-from mockCAFA import Protein, ProteinGo, Go, Evidence
+import os
+from modelCAFA import Protein, ProteinGo, Go, Evidence
 
 #This function queries the database 
 def queries(year):
@@ -67,18 +69,22 @@ def compare(laterDict,earlierDict,ontology):
                      proteinsType2[entryName] = later_ontoEviTermList
     return proteinsType2
 
-def writingToFile(benchmarkProteins,filename):
+def writingToFile(benchmarkProteins,dirname,filename):
+    if not os.path.exists(dirname):
+       os.makedirs(dirname)
     list_lines = []
     for proteinName, termEviOntoList in benchmarkProteins.items():
         for t,evi,o in termEviOntoList:
             list_lines.append(proteinName + "\t" + t + "\t"+ evi + "\t" + o + "\n")
-    f = open(filename + ".csv","w")
+    benchmarkFile = os.path.join(dirname,filename)
+    f = open(benchmarkFile + ".csv","w")
     f.writelines(list_lines)
 
 if __name__ == "__main__":
    parser = argparse.ArgumentParser()
    parser.add_argument("--chooseType","-t",help="Either noKnowledge or partialKnowledge")
    parser.add_argument("--chooseOntology","-o",help="Only if partialKnowledge choose: molecular_function OR biological_process OR cellular_component; skip this option if noKnowledge")
+   parser.add_argument("--chooseoutput","-d",help="Output directory path")
    args = parser.parse_args()
    nameGoEvidenceEarlier = queries(2013)
    nameGoEvidenceLater = queries(2014)
@@ -86,9 +92,9 @@ if __name__ == "__main__":
    if args.chooseType == "noKnowledge":
       nonexpProteins = collectNonExpProteinsEarlierOnly(earlierDict)
       benchmarkProteins = compareNonExpWithLaterDict(laterDict,earlierDict)
-      writingToFile(benchmarkProteins,"noKnowledge")
+      writingToFile(benchmarkProteins,args.chooseoutput,"noKnowledge")
    elif args.chooseType == "partialKnowledge":
       benchmarkProteins = compare(laterDict,earlierDict,args.chooseOntology)
-      writingToFile(benchmarkProteins,"partialKnowledge")
+      writingToFile(benchmarkProteins,args.chooseoutput,"partialKnowledge_"+args.chooseOntology)
    else:
       print "choose either noKnowledge or partialKnowledge"

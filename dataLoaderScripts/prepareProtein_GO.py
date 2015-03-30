@@ -1,6 +1,8 @@
+#!/usr/bin/python
 import sys
 import csv
 from collections import defaultdict
+import argparse
 
 def protein(proteinReader):
     proteinDict = {}
@@ -48,31 +50,67 @@ def getVersion(filePath):
 
 
 
-proteinFileHandle = sys.argv[1]
-oldmappingFileHandle = sys.argv[2]
-newmappingFileHandle = sys.argv[3]
-goFileHandle      = sys.argv[4]
-Protein_GO        = sys.argv[5]
+##proteinFileHandle = sys.argv[1]
+##oldmappingFileHandle = sys.argv[2]
+##newmappingFileHandle = sys.argv[3]
+##goFileHandle      = sys.argv[4]
+##Protein_GO        = sys.argv[5]
 
-with open(proteinFileHandle , "r") as proteinFile ,open(oldmappingFileHandle , "r") as oldmappingFile,open(newmappingFileHandle , "r") as newmappingFile ,open(goFileHandle , "r") as goFile, open(Protein_GO, "w") as outfile:
+def parser_code():
+    
+    parser = argparse.ArgumentParser(description='This script generates Protein_GO data.')
 
-     proteinReader = generateReader(proteinFile)
-     oldmappingReader = generateReader(oldmappingFile)
-     newmappingReader = generateReader(newmappingFile)
-     goReader      = generateReader(goFile)
+    parser.add_argument("-d", "--dataoutputdir", metavar="DIRECTORY",
+                        help="Folder contains the output.")
+                 
+    parser.add_argument("-t", "--tempdir",  metavar="DIRETORY",
+                        help="Folder contains the temporary files.")
+    
 
-     proteinDict = protein(proteinReader)
-     newmappingDict = mapping(newmappingReader)
-     oldmappingDict = mapping(oldmappingReader)
-     goDict      = go(goReader)
-     oldjointGOProtein = gather(proteinDict,oldmappingDict, goDict)
-     newjointGOProtein = gather(proteinDict,newmappingDict, goDict)     
-     i = 0
-     joint = set(oldjointGOProtein + newjointGOProtein)
-     for proteinIndex, goIndex in joint:
-         if i == 0:
-            print >> outfile, "FK_Protein", "\t", "FK_GO"
-            i+=1
-         print >> outfile,proteinIndex,"\t",goIndex
+    return parser.parse_args()
+
+def main():
+
+    parsed_args = parser_code()
+
+    dataoutputdir = parsed_args.dataoutputdir    
+    tempdir       = parsed_args.tempdir   
+
+    proteinFileHandle = dataoutputdir + "Protein" 
+    goFileHandle      = dataoutputdir + "GO"
+    Protein_GO        = dataoutputdir + "Protein_GO"
+    
+    oldmappingFileHandle = tempdir + "EntryAccGOontoEviYearEarlier"
+    newmappingFileHandle = tempdir + "EntryAccGOontoEviYearLater" 
+    
+    ##print proteinFileHandle 
+    ##print goFileHandle    
+    ##print Protein_GO
+    ##print oldmappingFileHandle
+    ##print newmappingFileHandle  
+
+    with open(proteinFileHandle , "r") as proteinFile ,open(oldmappingFileHandle , "r") as oldmappingFile,open(newmappingFileHandle , "r") as newmappingFile ,open(goFileHandle , "r") as goFile, open(Protein_GO, "w") as outfile:
+
+         proteinReader    = generateReader(proteinFile)
+         oldmappingReader = generateReader(oldmappingFile)
+         newmappingReader = generateReader(newmappingFile)
+         goReader         = generateReader(goFile)
+
+         proteinDict       = protein(proteinReader)
+         newmappingDict    = mapping(newmappingReader)
+         oldmappingDict    = mapping(oldmappingReader)
+         goDict            = go(goReader)
+         oldjointGOProtein = gather(proteinDict,oldmappingDict, goDict)
+         newjointGOProtein = gather(proteinDict,newmappingDict, goDict)    
+ 
+         i = 0
+         joint = set(oldjointGOProtein + newjointGOProtein)
+         for proteinIndex, goIndex in joint:
+             if i == 0:
+                print >> outfile, "FK_Protein", "\t", "FK_GO"
+                i+=1
+             print >> outfile,proteinIndex,"\t",goIndex
      
-        
+       
+if __name__ == '__main__':
+    main() 

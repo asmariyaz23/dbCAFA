@@ -1,0 +1,6 @@
+Serial	GO_Term	GO_Domain	Go_id	Value1	Value2	Value3
+1	Regulation of viral transcription	biological_process	GO:0046782	0	0	0
+2	Transcription DNA-templated	biological_process	GO:0006351	0	0	0
+3	Host cell membrane	cellular_component	GO:0033644	0	0	0
+4	Integral component of membrane	cellular_component	GO:0016021	0	0	0
+5	thioredoxin	molecular_function	GO:0000008	1	0	0
