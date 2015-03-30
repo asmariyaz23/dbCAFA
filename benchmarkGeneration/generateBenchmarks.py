@@ -8,19 +8,26 @@ from modelCAFA import Protein, ProteinGo, Go, Evidence
 #This function queries the database 
 def queries(year):
     nameGoEvidence = Protein.select(Protein.entryname ,Evidence.evidencecode ,Go.go_domain,
-    Go.go_term).join(ProteinGo).join(Evidence).switch(ProteinGo).join(Go).where(Evidence.ondate.year ==
+    Go.go_term,Go.go).join(ProteinGo).join(Evidence).switch(ProteinGo).join(Go).where(Evidence.ondate.year ==
     year).order_by(Protein.entryname).naive()
     return nameGoEvidence
 
 #Organize the data structure into a dictionary
 def organize(nameGoEvidenceEarlier,nameGoEvidenceLater):
+
     earlierDict = {}
     laterDict = {}
+
     for earlier in nameGoEvidenceEarlier.iterator():
-        earlierDict[earlier.entryname] = earlierDict.get(earlier.entryname,[]) + [((earlier.go_domain).strip(),(earlier.evidencecode).strip(),(earlier.go_term).strip())]
+        earlierDict[earlier.entryname] = earlierDict.get(earlier.entryname,[]) + [((earlier.go_domain).strip(),(earlier.evidencecode).strip(),
+                                                                                   (earlier.go_term).strip(),(earlier.go).strip())]
+
     for later in nameGoEvidenceLater.iterator():
-        laterDict[later.entryname] = laterDict.get(later.entryname,[]) + [((later.go_domain).strip(),(later.evidencecode).strip(),(later.go_term).strip())]
+        laterDict[later.entryname] = laterDict.get(later.entryname,[]) + [((later.go_domain).strip(),(later.evidencecode).strip(),
+                                                                           (later.go_term).strip(),(later.go).strip())]
+
     return earlierDict,laterDict
+
 
 #Extract only those proteins which have non-exp 
 #evidence codes alone
@@ -69,16 +76,39 @@ def compare(laterDict,earlierDict,ontology):
                      proteinsType2[entryName] = later_ontoEviTermList
     return proteinsType2
 
-def writingToFile(benchmarkProteins,dirname,filename):
+
+def writingToFile(laterDict,benchmarkProteins, dirname, filename):
     if not os.path.exists(dirname):
        os.makedirs(dirname)
+
     list_lines = []
-    for proteinName, termEviOntoList in benchmarkProteins.items():
-        for t,evi,o in termEviOntoList:
-            list_lines.append(proteinName + "\t" + t + "\t"+ evi + "\t" + o + "\n")
+    i = 0
+    
+    benchmark = {0:"NO GAIN",1: "GAIN"}
+
+    for proteinName, termEviOntoList in laterDict.items():
+        for t,evi,o,go_id in termEviOntoList:
+
+            if i == 0:
+               list_lines.append("Protein" + "\t" + "GO_Term" + "\t" + "GO_ID" + "\t" +"Ontology" + "\t" +"Evidence" + "\t" +"Benchmark" + "\n")
+               i+=1
+
+            else:
+               
+               if benchmarkProteins.has_key(proteinName): 
+                  list_lines.append(proteinName + "\t" + t + "\t"+ go_id  +"\t"+ o + "\t" + evi + "\t" + benchmark[1] + "\n")
+                   
+               else:
+                  list_lines.append(proteinName + "\t" + t + "\t"+ go_id  +"\t"+ o + "\t" + evi + "\t" + benchmark[0] + "\n") 
+                  
     benchmarkFile = os.path.join(dirname,filename)
     f = open(benchmarkFile + ".csv","w")
     f.writelines(list_lines)
+
+
+
+
+
 
 if __name__ == "__main__":
    parser = argparse.ArgumentParser()
@@ -92,9 +122,9 @@ if __name__ == "__main__":
    if args.chooseType == "noKnowledge":
       nonexpProteins = collectNonExpProteinsEarlierOnly(earlierDict)
       benchmarkProteins = compareNonExpWithLaterDict(laterDict,earlierDict)
-      writingToFile(benchmarkProteins,args.chooseoutput,"noKnowledge")
+      writingToFile(laterDict,benchmarkProteins,args.chooseoutput,"noKnowledge")
    elif args.chooseType == "partialKnowledge":
       benchmarkProteins = compare(laterDict,earlierDict,args.chooseOntology)
-      writingToFile(benchmarkProteins,args.chooseoutput,"partialKnowledge_"+args.chooseOntology)
+      writingToFile(laterDict,benchmarkProteins,args.chooseoutput,"partialKnowledge_"+args.chooseOntology)
    else:
       print "choose either noKnowledge or partialKnowledge"
