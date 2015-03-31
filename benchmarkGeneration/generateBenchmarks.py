@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import sys
-sys.path.insert(0, "/home/asmariyaz/dbCAFA/cafaModel")
 import argparse
 import os
 from modelCAFA import Protein, ProteinGo, Go, Evidence
@@ -77,29 +76,29 @@ def compare(laterDict,earlierDict,ontology):
     return proteinsType2
 
 
-def writingToFile(laterDict,benchmarkProteins, dirname, filename):
+def writingToFile(laterDict,earlierDict,benchmarkProteins, dirname, filename):
     if not os.path.exists(dirname):
        os.makedirs(dirname)
 
     list_lines = []
     i = 0
     
-    benchmark = {0:"NO GAIN",1: "GAIN"}
+    benchmark = {0:"NO_GAIN",1: "GAIN"}
 
     for proteinName, termEviOntoList in laterDict.items():
         for t,evi,o,go_id in termEviOntoList:
 
             if i == 0:
-               list_lines.append("Protein" + "\t" + "GO_Term" + "\t" + "GO_ID" + "\t" +"Ontology" + "\t" +"Evidence" + "\t" +"Benchmark" + "\n")
+               list_lines.append("Protein" + "\t" + "GO_Term" + "\t" + "GO_ID" + "\t" +"Ontology" + "\t" "Evidence" + "\t" +"Benchmark" + "\n")
                i+=1
 
             else:
-               
+                
                if benchmarkProteins.has_key(proteinName): 
                   list_lines.append(proteinName + "\t" + t + "\t"+ go_id  +"\t"+ o + "\t" + evi + "\t" + benchmark[1] + "\n")
                    
                else:
-                  list_lines.append(proteinName + "\t" + t + "\t"+ go_id  +"\t"+ o + "\t" + evi + "\t" + benchmark[0] + "\n") 
+                  list_lines.append(proteinName + "\t" + t + "\t"+ go_id  +"\t"+ o + "\t" + evi + "\t" + benchmark[0] + "\n")
                   
     benchmarkFile = os.path.join(dirname,filename)
     f = open(benchmarkFile + ".csv","w")
@@ -122,9 +121,9 @@ if __name__ == "__main__":
    if args.chooseType == "noKnowledge":
       nonexpProteins = collectNonExpProteinsEarlierOnly(earlierDict)
       benchmarkProteins = compareNonExpWithLaterDict(laterDict,earlierDict)
-      writingToFile(laterDict,benchmarkProteins,args.chooseoutput,"noKnowledge")
+      writingToFile(laterDict,earlierDict,benchmarkProteins,args.chooseoutput,"noKnowledge")
    elif args.chooseType == "partialKnowledge":
       benchmarkProteins = compare(laterDict,earlierDict,args.chooseOntology)
-      writingToFile(laterDict,benchmarkProteins,args.chooseoutput,"partialKnowledge_"+args.chooseOntology)
+      writingToFile(laterDict,earlierDict,benchmarkProteins,args.chooseoutput,"partialKnowledge_"+args.chooseOntology)
    else:
       print "choose either noKnowledge or partialKnowledge"

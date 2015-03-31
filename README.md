@@ -31,30 +31,22 @@ optional arguments:
 
    1.Create the database in mysql command line:
 
-     create <dbname>;
+     create [dbname];
 
      exit
 
-   2.mysql -u root -p try < cafa.sql
+   2.mysql -u [username] -p try < cafa.sql
 
      (Note: cafa.sql located in schema directory)
 
 
 3) Loading data generated in Step (1) into the database created in Step (2):
 
-   Start a mysql instance from command line and use the following commands to load data:
+   Edit file: /dbCAFA/dataLoaderScripts/cafaDBLoading.txt to reflect dbNAME and file paths of all the data files generated in Step 1.
 
-   - use <dbname>;
+   Run the following command in shell:
    
-   - LOAD DATA INFILE '<path of Protein file generated in (1)>' INTO TABLE Protein FIELDS TERMINATED BY '\t'  ENCLOSED BY '"'  LINES TERMINATED BY '\n'  (EntryName, Accession, CAFA_ID);
-
-   - LOAD DATA INFILE '<path of GO file generated in (1)>' INTO TABLE GO FIELDS TERMINATED BY '\t'  ENCLOSED BY '"'  LINES TERMINATED BY '\n' IGNORE 1 LINES (GO_id,GO_Term,GO_Domain);
-
-   - LOAD DATA INFILE ‘<path of Protein_GO file generated in (1)>' INTO TABLE Protein_GO FIELDS TERMINATED BY '\t'  ENCLOSED BY '"'  LINES TERMINATED BY '\n' IGNORE 1
-     LINES (FK_Protein, FK_GO);
-
-   - LOAD DATA INFILE '<path of Evidence file generated in (1)>' INTO TABLE Evidence FIELDS TERMINATED BY '\t'  ENCLOSED BY '"'  LINES TERMINATED BY '\n' IGNORE 1 LINES
-     (EvidenceCode,FK_Protein_GO,OnDate);
+   mysql -u [username] -p < /dbCAFA/dataLoaderScripts/cafaDBLoading.txt
 
    Note: Sometimes the path of the file is not found by mysql due to some problems, here is what I did to solve the issue:
 
