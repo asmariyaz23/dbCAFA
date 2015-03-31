@@ -35,7 +35,7 @@ optional arguments:
 
      exit
 
-   2.mysql -u [username] -p try < cafa.sql
+   2.mysql -u [username] -p [dbname] < cafa.sql
 
      (Note: cafa.sql located in schema directory)
 
@@ -86,3 +86,14 @@ optional arguments:
                         cellular_component; 
                         
                         skip this option if noKnowledge
+
+
+TODO:
+
+1) The data loading scripts for Protein, GO, Protein_GO and Evidence need editing so that they write AI of each table in the
+files generated. For consistency purposes Protein file needs to include a header. Parameterize the dates in prepareProtein.py 
+
+2) cafaDBLoading.txt needs: auto increments reset before you begin loading. Database name, file path should be
+parameterized. The infile command loading protein data should ignore the header once above point is completed.
+
+3) Editing the main.py in dataLoaderScripts directory so that it can run the files from anywhere.
